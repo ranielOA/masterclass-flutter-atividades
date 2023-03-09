@@ -1,5 +1,11 @@
-import 'package:atividade2/atividade2.dart' as atividade2;
+import 'package:atividade2/Person.dart';
 
-void main(List<String> arguments) {
-  print('Hello world: ${atividade2.calculate()}!');
+void main() {
+  Person person = Person(name: "Raniel", cpf: "809.805.840-94");
+
+  if (person.isCPFValid()) {
+    print(person.describePerson());
+  } else {
+    print('CPF Inválido');
+  }
 }
